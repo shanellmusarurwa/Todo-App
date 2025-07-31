@@ -29,7 +29,7 @@ export default function TodoList() {
         const task = {
           title: newTask,
           completed: false,
-          userId: 1 // Required by JSONPlaceholder
+          userId: 1 
         }
         const createdTask = await createTodo(task)
         setTodos([createdTask, ...todos])
@@ -66,7 +66,7 @@ export default function TodoList() {
       <div className="bg-white/10 rounded-lg shadow-lg p-6">
         <h2 className="text-xl font-semibold mb-6 text-gray-800">Todo List</h2>
         
-        {/* Add New Task */}
+        
         <div className="flex mb-6">
           <input
             type="text"
@@ -87,7 +87,7 @@ export default function TodoList() {
         <div className="space-y-3">
           {todos.map(todo => (
             <TodoItem 
-              key={todo.id} // This fixes the key prop error
+              key={todo.id} 
               todo={todo}
               onDelete={handleDelete}
               onUpdate={handleUpdate}
