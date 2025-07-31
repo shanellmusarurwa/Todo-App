@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+/* Smooth transitions */
+@layer utilities {
+  .transition-slow {
+    transition: all 0.5s ease;
+  }
+}
+
+
